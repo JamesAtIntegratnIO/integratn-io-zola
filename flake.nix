@@ -31,10 +31,10 @@
           nativeBuildInputs = with pkgs; [ zola ];
           configurePhase = ''
           mkdir -p "themes/${themeName}"
-          cp -r ${theme}/* "themes/${themeName}"
+          ln -s ${theme}/* "themes/${themeName}"
           '';
-          buildPhase = "zola build";
-          installPhase = "cp -r ./public ./dist";
+          buildPhase = "zola build -o $out";
+          dontInstall = true
         };
         defaultPackage = self.packages.${system}.website;
         devShell = pkgs.mkShell {
