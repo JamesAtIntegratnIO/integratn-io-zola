@@ -34,7 +34,7 @@
           cp -r ${theme}/* "themes/${themeName}"
           '';
           buildPhase = "zola build";
-          installPhase = "cp -r public $out";
+          installPhase = "cp -r ./public ./dist";
         };
         defaultPackage = self.packages.${system}.website;
         devShell = pkgs.mkShell {
