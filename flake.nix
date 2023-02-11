@@ -31,8 +31,7 @@
           nativeBuildInputs = with pkgs; [ zola ];
           configurePhase = ''
           mkdir -p "themes/${themeName}"
-          cp -r ${theme}/* "themes/${themeName}
-          
+          cp -r ${theme}/* "themes/${themeName}"
           '';
           buildPhase = "zola build";
           installPhase = "cp -r public $out";
