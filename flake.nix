@@ -34,7 +34,7 @@
           ln -s ${theme}/* "themes/${themeName}"
           '';
           buildPhase = "zola build -o $out";
-          dontInstall = true
+          dontInstall = true;
         };
         defaultPackage = self.packages.${system}.website;
         devShell = pkgs.mkShell {
