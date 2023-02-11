@@ -1,0 +1,94 @@
+{
+  "nodes": {
+    "codinfox": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1626987064,
+        "narHash": "sha256-BwPzd5pZUuSG2gDBLvNvXZiQ3ucL1lky5s/QAKEu1tc=",
+        "owner": "svavs",
+        "repo": "codinfox-zola",
+        "rev": "62e473dfc1f385ded05b40017b9c9a4a472f1bff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "svavs",
+        "repo": "codinfox-zola",
+        "type": "github"
+      }
+    },
+    "deepthought": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672219760,
+        "narHash": "sha256-4Z5jcDUP37I8Cq5hCOMsYdtzq03b8Al4HDmYMdWloFs=",
+        "owner": "ratanshreshtha",
+        "repo": "deepthought",
+        "rev": "e87a89b46fe0b211182acb33f5b31a2bb16c9983",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ratanshreshtha",
+        "repo": "deepthought",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1675698036,
+        "narHash": "sha256-BgsQkQewdlQi8gapJN4phpxkI/FCE/2sORBaFcYbp/A=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "1046c7b92e908a1202c0f1ba3fc21d19e1cf1b62",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "codinfox": "codinfox",
+        "deepthought": "deepthought",
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs",
+        "terminimal": "terminimal"
+      }
+    },
+    "terminimal": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1674908149,
+        "narHash": "sha256-7qN5a//BjTn4OhrkgziWCP8w7GOKZJSVcg9Qz0Ua150=",
+        "owner": "pawroman",
+        "repo": "zola-theme-terminimal",
+        "rev": "0ec1aed81acf7ea47e457b9289c1974186c3eb3d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pawroman",
+        "repo": "zola-theme-terminimal",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

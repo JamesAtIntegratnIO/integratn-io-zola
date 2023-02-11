@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="has-text-centered">
+      <h1 class="title is-2">
+        <span class="icon">
+          <i class="fas fa-list-ol"></i>
+        </span>
+        Series
+      </h1>
+      <p class='subtitle is-4'>{{ terms | length }} series in total</p>
+      <p>
+        {% for series in terms %}
+        <a href="{{ get_taxonomy_url(kind='series', name=series.name) }}" class="mr-4">
+          <span class="icon">
+            <i class="fas fa-tag"></i>
+          </span>
+          <span>{{series.name}} <sup>{{ series.pages | length }}</sup></span>
+        </a>
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock content %}
