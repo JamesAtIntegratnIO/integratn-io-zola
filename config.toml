@@ -1,5 +1,5 @@
 # The base URL of the site; the only required configuration variable.
-base_url = "https://timely-cucurucho-d173ec.netlify.app"
+base_url = "https://cheery-tarsier-25c634.netlify.app/"
 
 # The site title and description; used in feeds by default.
 title = "integratn.io"

@@ -3,11 +3,11 @@
     "deepthought": {
       "flake": false,
       "locked": {
-        "lastModified": 1672219760,
-        "narHash": "sha256-4Z5jcDUP37I8Cq5hCOMsYdtzq03b8Al4HDmYMdWloFs=",
+        "lastModified": 1681035730,
+        "narHash": "sha256-dzhfGmhuNCbloqknM7lVnFbNYmf2/ue7az6DQok44yM=",
         "owner": "ratanshreshtha",
         "repo": "deepthought",
-        "rev": "e87a89b46fe0b211182acb33f5b31a2bb16c9983",
+        "rev": "430c1d5085dd6bea4cd6bd2d55003db67ba6bea0",
         "type": "github"
       },
       "original": {
