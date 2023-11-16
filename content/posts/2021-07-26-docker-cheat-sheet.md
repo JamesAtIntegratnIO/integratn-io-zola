@@ -20,5 +20,5 @@ nocomment: false
 ---
 Here is just a huge list of handy docker commands.
 <!--more-->
-{{ gist(url="https://gist.github.com/JamesAtIntegratnIO/e5679703d5828cb9fc5a59712a4dd4dc") }}
+[cheat-sheet](https://gist.github.com/JamesAtIntegratnIO/e5679703d5828cb9fc5a59712a4dd4dc)
 More of my [gists](https://gist.github.com/JamesAtIntegratnIO)
