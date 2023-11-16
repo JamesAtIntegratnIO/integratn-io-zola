@@ -16,22 +16,28 @@
     flake = false;
   };
 
-  outputs = { self, nixpkgs, flake-utils, terminimal, codinfox, deepthought }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    terminimal,
+    codinfox,
+    deepthought,
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
         theme = deepthought;
         pkgs = nixpkgs.legacyPackages.${system};
-        themeName = ((builtins.fromTOML (builtins.readFile "${theme}/theme.toml")).name);
-      in
-      {
+        themeName = (builtins.fromTOML (builtins.readFile "${theme}/theme.toml")).name;
+      in {
         packages.website = pkgs.stdenv.mkDerivation rec {
           pname = "static-website";
           version = "2022-02-07";
           src = ./.;
-          nativeBuildInputs = with pkgs; [ zola ];
+          nativeBuildInputs = with pkgs; [zola];
           configurePhase = ''
-          mkdir -p "themes/${themeName}"
-          ln -s ${theme}/* "themes/${themeName}"
+            mkdir -p "themes/${themeName}"
+            cp -r ${theme}/* "themes/${themeName}"
           '';
           buildPhase = "zola build -o $out";
           dontInstall = true;
