@@ -3,14 +3,14 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
   # info for theme: https://www.getzola.org/themes/blow/
-  inputs.terminimal = {
-    url = "github:pawroman/zola-theme-terminimal";
-    flake = false;
-  };
-  inputs.codinfox = {
-    url = "github:svavs/codinfox-zola";
-    flake = false;
-  };
+  # inputs.terminimal = {
+  #   url = "github:pawroman/zola-theme-terminimal";
+  #   flake = false;
+  # };
+  # inputs.codinfox = {
+  #   url = "github:svavs/codinfox-zola";
+  #   flake = false;
+  # };
   inputs.deepthought = {
     url = "github:ratanshreshtha/deepthought";
     flake = false;
@@ -20,8 +20,8 @@
     self,
     nixpkgs,
     flake-utils,
-    terminimal,
-    codinfox,
+    # terminimal,
+    # codinfox,
     deepthought,
   }:
     flake-utils.lib.eachDefaultSystem (
@@ -37,7 +37,7 @@
           nativeBuildInputs = with pkgs; [zola];
           configurePhase = ''
             mkdir -p "themes/${themeName}"
-            cp -r ${theme}/* "themes/${themeName}"
+            cp -r${theme}/* "themes/${themeName}"
           '';
           buildPhase = "zola build -o $out";
           dontInstall = true;
