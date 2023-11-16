@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "codinfox": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1626987064,
-        "narHash": "sha256-BwPzd5pZUuSG2gDBLvNvXZiQ3ucL1lky5s/QAKEu1tc=",
-        "owner": "svavs",
-        "repo": "codinfox-zola",
-        "rev": "62e473dfc1f385ded05b40017b9c9a4a472f1bff",
-        "type": "github"
-      },
-      "original": {
-        "owner": "svavs",
-        "repo": "codinfox-zola",
-        "type": "github"
-      }
-    },
     "deepthought": {
       "flake": false,
       "locked": {
@@ -65,27 +49,9 @@
     },
     "root": {
       "inputs": {
-        "codinfox": "codinfox",
         "deepthought": "deepthought",
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "terminimal": "terminimal"
-      }
-    },
-    "terminimal": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1674908149,
-        "narHash": "sha256-7qN5a//BjTn4OhrkgziWCP8w7GOKZJSVcg9Qz0Ua150=",
-        "owner": "pawroman",
-        "repo": "zola-theme-terminimal",
-        "rev": "0ec1aed81acf7ea47e457b9289c1974186c3eb3d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "pawroman",
-        "repo": "zola-theme-terminimal",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },

@@ -37,7 +37,7 @@
           nativeBuildInputs = with pkgs; [zola];
           configurePhase = ''
             mkdir -p "themes/${themeName}"
-            cp -r${theme}/* "themes/${themeName}"
+            cp -r ${theme}/* "themes/${themeName}"
           '';
           buildPhase = "zola build -o $out";
           dontInstall = true;
@@ -49,7 +49,7 @@
           ];
           shellHook = ''
             mkdir -p themes
-            ln -sn "${theme}" "themes/${themeName}"
+            cp -r "${theme}" "themes/${themeName}"
           '';
         };
       }
