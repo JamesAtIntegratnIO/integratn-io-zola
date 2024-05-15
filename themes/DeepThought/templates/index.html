@@ -15,7 +15,30 @@
     </div>
     <div class="content">
       {{ section.content | safe }}
+      <p></p>
+      {% set post_section = get_section(path="posts/_index.md") %}
+      <div>
+        <h2 class="title is-2">Featured Post</h2>
+          <a class="title is-3" href="{{post_section.pages[0].permalink}}">{{post_section.pages[0].title}}
+            <p class="subtitle is-5">{{post_section.pages[0].description}}</p>
+          </a>     
+        <h3 class="title is-4">Recent Posts</h3>
+        <div>
+            {% for post in post_section.pages %}
+              {% if loop.first %}
+              {% continue %}
+              {% endif %}
+              {% if loop.index > 5 %}
+              {% break %}
+              {% endif %}
+              
+                <a class="subtitle" href="{{post.permalink}}">{{post.title}}</a>
+                <p class="subtitle is-5">{{post.description}}</p>
+            {% endfor %}
+              
     </div>
+    
   </div>
 </section>
+
 {% endblock %}

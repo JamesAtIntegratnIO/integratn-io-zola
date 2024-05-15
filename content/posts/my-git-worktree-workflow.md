@@ -15,6 +15,7 @@ syndication:
     url: https://www.linkedin.com/posts/jjdreier_my-git-worktree-workflow-activity-6823824959446552576-niGQ
 nocomment: false
 draft: false
+description: How I leverage git worktree to save myself time working with multiple branches simultaneously.  
 ---
 
 I recently made a change to how I work on repositories when I have to work with others. It has been a life saver. 
